@@ -6,7 +6,17 @@ class ListConteacts extends Component {
         return(
             <ol className='contact-list'>
                 {this.props.list.map((list)=>(
-                    <li key={list.id}>{list.name}</li>
+                    <li key={list.id} className='contact-list-item'>
+                        <div className='contact-avatar'
+                             style={{backgroundImage:`url(${list.avatarURL})`}}
+                        />
+                        <div className='contact-details'>
+                            <p>{list.name}</p>
+                            <p>{list.email}</p>
+                        </div>
+                        <button className='contact-remove'>Remove</button>
+                    </li>
+
                 ))}
             </ol>
         )
