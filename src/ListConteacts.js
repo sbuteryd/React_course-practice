@@ -2,10 +2,12 @@ import  React,{ Component } from  'react'
 
 class ListConteacts extends Component {
     render() {
-        console.log(this.props.list)
+        console.log(this.props)
         return(
             <ol className='contact-list'>
-                <p>russell</p>
+                {this.props.list.map((list)=>(
+                    <li key={list.id}>{list.name}</li>
+                ))}
             </ol>
         )
     }
