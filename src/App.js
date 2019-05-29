@@ -1,38 +1,33 @@
 import React , {Component} from 'react';
 
 
-class ContactList extends  React.Component{
+class ShowName extends  React.Component {
   render() {
-    const people = this.props.contacts
-
-    return (<ol>
-      {people.map(person =>(
-          <li>{person.name}</li>
-          )
-      )}
-    </ol>)
+   const people = this.props.nameList
+    return (
+        <ol>
+          {people.map(pare =>(
+             <li>{pare.name}</li>
+          ))}
+        </ol>)
   }
 }
 
 
-class App extends Component{
-  render() {
-    return (
-        <div className='App'>
-          <ContactList contacts={[
-            {name:'michael'},
-            {name:'Ryan'},
-            {name:'Tyler'}
-          ]}/>
-          <ContactList contacts={[
+
+export default class App extends React.Component{
+  render(){
+    return(
+        <div className='app'>
+          <ShowName nameList={[
             {name:'russell'},
-            {name:"lihangen"},
-            {name:"somePeople"}
+            {name:'lihangen'}
+            ]}/>
+          <ShowName nameList ={[
+            {name:"gem"},
+            {name:"anyone"}
           ]}/>
         </div>
     )
   }
 }
-
-
-export default App;
