@@ -12,7 +12,7 @@ function ListConteacts(props) {
                         <p>{list.name}</p>
                         <p>{list.email}</p>
                     </div>
-                    <button className='contact-remove'>Remove</button>
+                    <button onClick={()=>props.onDeleteContact(list)} className='contact-remove'>Remove</button>
                 </li>
             ))}
         </ol>
