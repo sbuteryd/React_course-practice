@@ -1,6 +1,17 @@
 import  React,{Component} from 'react'
 import ListConteacts from './ListConteacts'
 
+class App extends Component {
+    render() {
+        return(
+            <div>
+                <ListConteacts list ={contacts}/>
+            </div>
+        )
+    }
+}
+
+
 const contacts = [
     {
         "id": "ryan",
@@ -21,14 +32,4 @@ const contacts = [
         "avatarURL": "http://localhost:5001/tyler.jpg"
     }
 ]
-class App extends Component {
-    render() {
-        return(
-            <div>
-                <ListConteacts list ={contacts}/>
-            </div>
-        )
-    }
-}
-
 export  default App
