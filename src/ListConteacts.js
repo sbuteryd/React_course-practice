@@ -1,4 +1,5 @@
 import  React,{ Component } from  'react'
+import  PropTypes from 'prop-types'
 
 function ListConteacts(props) {
     return(
@@ -17,6 +18,11 @@ function ListConteacts(props) {
             ))}
         </ol>
     )
+}
+
+ListConteacts.prototype = {
+    list:PropTypes.array.isRequired,
+    onDeleteContact:PropTypes.func.isRequired,
 }
 
 

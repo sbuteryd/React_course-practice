@@ -36,11 +36,12 @@ class App extends Component {
 
         return(
             <div>
-                <LwistConteacts onDeleteContact={this.removeContact} list ={this.state.contacts}/>
+                <ListConteacts onDeleteContact={this.removeContact} list ={this.state.contacts}/>
             </div>
         )
     }
 }
+
 
 
 
