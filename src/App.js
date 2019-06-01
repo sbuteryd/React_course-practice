@@ -1,10 +1,17 @@
 import  React,{Component} from 'react'
 import ListConteacts from './ListConteacts'
+import * as ContactsApi from  './utils/ContactsAPI'
 
 class App extends Component {
     state = {
         contacts : []
     };
+    componentDidMount() {
+        ContactsApi.getAll().then((contacts)=>
+            this.setState({contacts})
+        )
+    }
+
     removeContact = (contact) =>{
         console.log(contact)
         this.setState((state)=>({
